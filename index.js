@@ -31,7 +31,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'resources',
+        name: 'installationResources',
         message: 'What steps are required to install your project? Please provide step by step instructions to get the environment ready'
     },
     {
@@ -54,6 +54,16 @@ const questions = [
         type: 'input',
         name: 'name',
         message: 'What is your name?'
+    },
+    {
+        type: 'input',
+        message: 'If you want contribution please detail how people can.',
+        name: 'contribute'
+    },
+    {
+        type: 'input',
+        message: 'Write out tests for your application. Then provide examples on how to run them faster.',
+        name: 'tests'
     }
 ]
 

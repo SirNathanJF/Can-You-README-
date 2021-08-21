@@ -62,5 +62,42 @@ function markdownGenerator(data) {
                 For more information, please refer to <https://unlicense.org>`
             break;
     }
+    return `
+# ${data.title}
+![License](${badge})
     
+${data.description}
+   
+## Table of Contents
+* [Installation Guide](#installation guide)
+* [Instructions](#instructions)
+* [Credits](#credits)
+* [License](#license)
+* [Questions](#questions)
+* [Contributing](#contributing)
+* [Tests](#tests)
+    
+## Installation Guide
+${data.installationResources}
+
+## Instructions
+${data.instructions}
+
+## Credits
+${data.credits}
+
+## License
+${licenseDesc}
+
+---
+## Questions
+If you have any questions or concerns reach me on [Github](https://github.com/${data.github}) or through email at <${data.email}>
+## Contributing
+${data.contribute}
+
+## Tests
+${data.tests}
+`;
 }
+    
+module.exports = generateMarkdown;  
