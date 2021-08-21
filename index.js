@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const markdownGenerator = require('./assets/js/markdownGenerator');
 const fs = require('fs');
-
+// This is an array of questions that will be prompted to the user
 const questions = [
     {
         type: 'input',
@@ -66,7 +66,7 @@ const questions = [
         message: 'Are there any tests for your application?'
     }
 ];
-
+// The runApp function is everything that makes the app work. shows prompts, then writes a file based on those prompts. 
 function runApp () {
     inquirer
     .prompt(questions)
@@ -75,4 +75,5 @@ function runApp () {
         err => err ? console.error(err) : console.log('Your file is being generated! It will be in the folder named: Generated_File'))
     });
 };
+// calling of the runApp function
 runApp();

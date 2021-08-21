@@ -1,5 +1,4 @@
 // This is the function that is used to generate the readme
-
 function markdownGenerator(data) {
     let badge = '';
     let licenseDesc = '';
@@ -105,5 +104,5 @@ ${data.contributions}
 ${data.testing}
 `;
 }
-    
+// This exports the function to be used on the index.js page. 
 module.exports = markdownGenerator;  
