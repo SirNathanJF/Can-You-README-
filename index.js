@@ -1,6 +1,6 @@
 // These are the required resources for the project
 const inquirer = require('inquirer');
-const generateMarkdownJS = require('./assets/js/markdownGenerator');
+const markdownGenerator = require('./assets/js/markdownGenerator');
 const fs = require('fs');
 
 const questions = [
@@ -58,12 +58,12 @@ const questions = [
     {
         type: 'input',
         name: 'contributions',
-        message: 'If you want contribution please detail how people can.'
+        message: 'Would you like contributions to this app? If yes, please explain how the contributors could help'
     },
     {
         type: 'input',
         name: 'testing',
-        message: 'Write out tests for your application. Then provide examples on how to run them faster.'
+        message: 'Are there any tests for your application?'
     }
 ];
 
@@ -72,7 +72,7 @@ function runApp () {
     .prompt(questions)
     .then((data) => {
         fs.writeFile('./Generated_File/README.md', markdownGenerator(data),
-        err => err ? console.error(err) : console.log('Generating your File!'))
+        err => err ? console.error(err) : console.log(`${data.licensing}`))
     });
 };
 runApp();

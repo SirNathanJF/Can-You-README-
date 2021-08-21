@@ -1,7 +1,9 @@
 // This is the function that is used to generate the readme
 
 function markdownGenerator(data) {
-    switch (data.license) {
+    let badge = '';
+    let licenseDesc = '';
+    switch (data.licensing) {
         case 'GNU GPLv3':
             badge = 'https://img.shields.io/badge/license-GPLv3-blue'
             licenseDesc = `GNU GENERAL PUBLIC LICENSE
@@ -32,11 +34,13 @@ function markdownGenerator(data) {
                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-                SOFTWARE.`
+                SOFTWARE.
+                For more information, please refer to <https://tlo.mit.edu/>
+                `
             break;
         
         case 'Unlicense':
-            badge = 'https://img.shields.io/badge/<license>-<none>-<brightgreen>'
+           badge = 'https://img.shields.io/badge/license-Unlicense-blue.svg'
             licenseDesc = `This is free and unencumbered software released into the public domain.
                 Anyone is free to copy, modify, publish, use, compile, sell, or
                 distribute this software, either in source code form or as a compiled
@@ -64,12 +68,12 @@ function markdownGenerator(data) {
     }
     return `
 # ${data.title}
-![License](${badge})
+![badge](https://img.shields.io/badge/License-${data.licensing}-brightgreen)
     
 ${data.description}
    
 ## Table of Contents
-* [Installation Guide](#installation guide)
+* [Installation Guide](#installation)
 * [Instructions](#instructions)
 * [Credits](#credits)
 * [License](#license)
@@ -101,4 +105,4 @@ ${data.testing}
 `;
 }
     
-module.exports = generateMarkdown;  
+module.exports = markdownGenerator;  
