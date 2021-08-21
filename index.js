@@ -1,3 +1,4 @@
+// These are the required resources for the project
 const inquirer = require('inquirer');
 const generateMarkdownJS = require('./assets/js/markdownGenerator');
 const fs = require('fs');
@@ -47,7 +48,7 @@ const questions = [
         type: 'list',
         name: 'licensing',
         message: 'What license does this project use?',
-        choices: ['MIT', 'Unlicensed']
+        choices: ['GNU GPLv3', 'MIT', 'Unlicense']
     },
     {
         type: 'input',
