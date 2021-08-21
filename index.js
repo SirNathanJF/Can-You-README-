@@ -57,13 +57,13 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'If you want contribution please detail how people can.',
-        name: 'contribute'
+        name: 'contributions',
+        message: 'If you want contribution please detail how people can.'
     },
     {
         type: 'input',
-        message: 'Write out tests for your application. Then provide examples on how to run them faster.',
-        name: 'tests'
+        name: 'testing',
+        message: 'Write out tests for your application. Then provide examples on how to run them faster.'
     }
 ]
 

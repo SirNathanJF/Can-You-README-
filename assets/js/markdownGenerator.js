@@ -92,11 +92,12 @@ ${licenseDesc}
 ---
 ## Questions
 If you have any questions or concerns reach me on [Github](https://github.com/${data.github}) or through email at <${data.email}>
+
 ## Contributing
-${data.contribute}
+${data.contributions}
 
 ## Tests
-${data.tests}
+${data.testing}
 `;
 }
     
