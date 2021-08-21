@@ -72,7 +72,7 @@ function runApp () {
     .prompt(questions)
     .then((data) => {
         fs.writeFile('./Generated_File/README.md', markdownGenerator(data),
-        err => err ? console.error(err) : console.log('Your file is being generated!'))
+        err => err ? console.error(err) : console.log('Your file is being generated! It will be in the folder named: Generated_File'))
     });
 };
 runApp();
