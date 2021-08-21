@@ -13,7 +13,7 @@ This is a sample README for this week's (9) homework.
 * [Contributing](#contributing)
 * [Tests](#tests)
     
-## Installation Guide
+## Installation
 To install this project, please fork and clone the repository. In the terminal please run ```npm i inquirer``` to ensure it is installed for this project.
 
 ## Instructions
