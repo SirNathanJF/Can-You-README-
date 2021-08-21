@@ -65,5 +65,14 @@ const questions = [
         name: 'testing',
         message: 'Write out tests for your application. Then provide examples on how to run them faster.'
     }
-]
+];
 
+function runApp () {
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        fs.writeFile('./Generated_File/README.md', markdownGenerator(data),
+        err => err ? console.error(err) : console.log('Generating your File!'))
+    });
+};
+runApp();
